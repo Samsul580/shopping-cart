@@ -73,7 +73,7 @@
       </div>
    </section>
    <script>
-      // phone plus handler
+      // phone plus button handler
       const phonePlus = document.getElementById("phone-plus");
       phonePlus.addEventListener("click", function () {
          const phoneAmount = document.getElementById("phone-amount").value;
@@ -89,7 +89,7 @@
          const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
          document.getElementById("total").innerText = allTotalNumber;
       })
-      // phone minus handler
+      // phone minus button handler
       const phoneMinus = document.getElementById("phone-minus");
       phoneMinus.addEventListener("click", function () {
          const phoneAmount = document.getElementById("phone-amount").value;
@@ -105,7 +105,7 @@
          const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
          document.getElementById("total").innerText = allTotalNumber;
       })
-      // case plus handler
+      // case plus button handler
       const casePlus = document.getElementById("case-plus");
       casePlus.addEventListener("click", function(){
          const caseAmount = document.getElementById("case-amount").value;
@@ -122,21 +122,22 @@
          const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
          document.getElementById("total").innerText = allTotalNumber;
       })
-      // // case minus handler
-      // const phoneMinus = document.getElementById("case-minus");
-      // phoneMinus.addEventListener("click", function () {
-      //    const phoneAmount = document.getElementById("case-amount").value;
-      //    const phoneAmountNumber = parseFloat(phoneAmount);
-      //    const total = phoneAmountNumber - 1;
-      //    document.getElementById("case-amount").value = total;
-      //    const phonePrice = document.getElementById("case-price").innerText;
-      //    const phonePriceNumber = parseFloat(phonePrice);
-      //    const totalPhonePrice = document.getElementById("case-price").innerText = phonePriceNumber - 1219;
-      //    const subtotal = document.getElementById("subtotal").innerText;
-      //    const subtotalNumber = parseFloat(subtotal);
-      //    const totalSubtotalNumber = subtotalNumber - 59;
-      //    const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
-      //    document.getElementById("total").innerText = allTotalNumber;
+      // case minus button handler
+      const caseMinus = document.getElementById("case-minus");
+      caseMinus.addEventListener("click", function(){
+         const caseAmount = document.getElementById("case-amount").value;
+         const caseAmountNumber = parseFloat(caseAmount);
+         const total = caseAmountNumber - 1;
+         document.getElementById("case-amount").value = total;
+         const phonePrice = document.getElementById("case-price").innerText;
+         const phonePriceNumber = parseFloat(phonePrice);
+         const totalPhonePrice = document.getElementById("case-price").innerText = phonePriceNumber - 59;
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalNumber = parseFloat(subtotal);
+         const totalSubtotalNumber = subtotalNumber - 59;
+         const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
+         document.getElementById("total").innerText = allTotalNumber;
+      })
    </script>
 </body>
 
