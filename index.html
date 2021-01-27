@@ -15,7 +15,7 @@
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div id="phone-box" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -29,11 +29,11 @@
                            <button id="phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="phone-price">1219</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img id="phone-remove" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
-               <div class="cart-item">
+               <div id="case-box" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -46,7 +46,7 @@
                            <button id="case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="case-price">59</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img id="case-remove" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
@@ -72,6 +72,7 @@
          </div>
       </div>
    </section>
+
    <script>
       // phone plus button handler
       const phonePlus = document.getElementById("phone-plus");
@@ -107,7 +108,7 @@
       })
       // case plus button handler
       const casePlus = document.getElementById("case-plus");
-      casePlus.addEventListener("click", function(){
+      casePlus.addEventListener("click", function () {
          const caseAmount = document.getElementById("case-amount").value;
          const caseAmountNumber = parseFloat(caseAmount);
          const total = caseAmountNumber + 1;
@@ -115,7 +116,6 @@
          const casePrice = document.getElementById("case-price").innerText;
          const casePriceNumber = parseFloat(casePrice);
          const totalCasePrice = document.getElementById("case-price").innerText = casePriceNumber + 59;
-
          const subtotal = document.getElementById("subtotal").innerText;
          const subtotalNumber = parseFloat(subtotal);
          const totalSubtotalNumber = subtotalNumber + 59;
@@ -124,7 +124,7 @@
       })
       // case minus button handler
       const caseMinus = document.getElementById("case-minus");
-      caseMinus.addEventListener("click", function(){
+      caseMinus.addEventListener("click", function () {
          const caseAmount = document.getElementById("case-amount").value;
          const caseAmountNumber = parseFloat(caseAmount);
          const total = caseAmountNumber - 1;
@@ -138,7 +138,20 @@
          const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
          document.getElementById("total").innerText = allTotalNumber;
       })
+      // phone remove button handler
+      const phoneRemove = document.getElementById("phone-remove");
+      phoneRemove.addEventListener("click", function () {
+         const phoneBox = document.getElementById("phone-box");
+         phoneBox.style.display = "none";
+      })
+      // case remove button handler
+      const caseBox = document.getElementById("case-remove");
+      caseBox.addEventListener("click", function () {
+         const caseBox = document.getElementById("case-box");
+         caseBox.style.display = "none";
+      })
    </script>
+
 </body>
 
 </html>
