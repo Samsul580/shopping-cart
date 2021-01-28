@@ -143,12 +143,22 @@
       phoneRemove.addEventListener("click", function () {
          const phoneBox = document.getElementById("phone-box");
          phoneBox.style.display = "none";
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalNumber = parseFloat(subtotal);
+         const totalSubtotalNumber = subtotalNumber - 1219;
+         const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
+         document.getElementById("total").innerText = allTotalNumber;
       })
       // case remove button handler
       const caseBox = document.getElementById("case-remove");
       caseBox.addEventListener("click", function () {
          const caseBox = document.getElementById("case-box");
          caseBox.style.display = "none";
+         const subtotal = document.getElementById("subtotal").innerText;
+         const subtotalNumber = parseFloat(subtotal);
+         const totalSubtotalNumber = subtotalNumber - 59;
+         const allTotalNumber = document.getElementById("subtotal").innerText = totalSubtotalNumber;
+         document.getElementById("total").innerText = allTotalNumber;
       })
    </script>
 
